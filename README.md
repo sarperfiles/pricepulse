@@ -7,7 +7,6 @@ price history, and triggers in-app alerts when user-defined rules fire (target p
 percentage drop). Built around a modular monolith plus an ARQ worker, with a stealth
 scraping engine that handles JavaScript-rendered, Cloudflare-protected pages.
 
----
 
 ## Submission
 
@@ -20,7 +19,6 @@ scraping engine that handles JavaScript-rendered, Cloudflare-protected pages.
 | **Live system** | https://pricepulse.hackmap.win |
 | **Project report** | [`docs/PROJECT_REPORT.pdf`](docs/PROJECT_REPORT.pdf) |
 
----
 
 ## Stack
 
@@ -37,7 +35,6 @@ scraping engine that handles JavaScript-rendered, Cloudflare-protected pages.
 | CI/CD | GitHub Actions → GHCR (`api`, `frontend` images) |
 | Auth | JWT (access + refresh) · API keys |
 
----
 
 ## Run locally
 
@@ -52,7 +49,6 @@ docker compose exec api alembic -c backend/alembic.ini upgrade head
 Seed an admin user, then add any product URL from the dashboard. The scheduler picks
 it up within a minute and runs the first scrape.
 
----
 
 ## CI
 
