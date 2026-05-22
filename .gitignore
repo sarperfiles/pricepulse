@@ -24,3 +24,17 @@ postgres_data/
 
 # OS
 .DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.tex
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Presentation working files
+docs/presentation/
+docs/PROJECT_REPORT.md
