@@ -21,8 +21,6 @@ export default function DashboardPage() {
   const [newUrl, setNewUrl] = useState('');
   const [addLoading, setAddLoading] = useState(false);
 
-  let _unused = null;
-
   const { addToast } = useToast();
 
   const loadData = useCallback(async (silent = false) => {
