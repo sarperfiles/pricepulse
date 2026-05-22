@@ -66,7 +66,7 @@ async def client(setup_database) -> AsyncClient:
     app.dependency_overrides.clear()
 
 
-@pytest_asyncio.fixture(loop_scope="session")
+@pytest_asyncio.fixture(scope="session", loop_scope="session")
 async def admin_user(setup_database):
     from backend.app.models.user import User
 
@@ -85,7 +85,7 @@ async def admin_user(setup_database):
         return user
 
 
-@pytest_asyncio.fixture(loop_scope="session")
+@pytest_asyncio.fixture(scope="session", loop_scope="session")
 async def auth_headers(admin_user) -> dict[str, str]:
     token = create_access_token(
         subject=str(admin_user.id),
